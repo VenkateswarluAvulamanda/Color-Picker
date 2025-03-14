@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <h1>Color Picker</h1>
+        <div class="container">
+            <div class="content">
+                <h2 contenteditable="true" id="text">Enter your Text</h2>
+            </div>
+            <div class="color-controls">
+                <div> 
+                    <h3>Change Text Color</h3>
+                    <input type="color" oninput="changeTextColor(this.value)">
+                </div>
+                <div>
+                    <h3>Change Background Color</h3>
+                    <input type="color" oninput="changeBackgroundColor(this.value)">
+                </div>
+            </div>
+            <div class="font-controls">
+                <h3>Change Text Font</h3>
+                <span style="font-family: Times New Roman;" onclick="changeFont('Times New Roman')">Times New Roman</span> 
+                <span style="font-family: Verdana;" onclick="changeFont('Verdana')">Verdana</span>
+                <span style="font-family: Impact;" onclick="changeFont('Impact')">Impact</span>
+                <span style="font-family: Georgia;" onclick="changeFont('Georgia')">Georgia</span>
+                <span style="font-family: Arial;" onclick="changeFont('Arial')">Arial</span>
+            </div>
+        </div>
+        <div id="button">
+            <button>Download</button>
+        </div>
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>
